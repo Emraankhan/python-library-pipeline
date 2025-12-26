@@ -40,8 +40,7 @@ DB_CONN_STRING=postgresql://your_user:your_password@host.docker.internal:5432/my
 
 Note: The address host.docker.internal is used to allow the Docker container to communicate with the PostgreSQL service running on your Windows host.
 
-
-3. Running with Docker (Recommended)
+### 3. Running with Docker (Recommended)
 Build the Image:
 
 docker build -t my-library-app .
@@ -51,22 +50,18 @@ Run the Interactive Container:
 docker run -it --rm --name library-container my-library-app
 
 
-Project Structure
-main.py - The primary entry point and interactive CLI menu.
+## Project Structure
 
-scripts/
+.
+├── main.py                 # Application entry point and interactive CLI
+├── scripts/
+│   ├── ingestion.py        # CSV ingestion and Google Books API logic
+│   └── check_data.py       # Database checks and inventory reporting
+├── data/                   # Source CSV files
+├── Dockerfile              # Docker image configuration
+├── requirements.txt        # Python dependencies
+└── .env                    # Environment variables (private)
 
-ingestion.py - Logic for processing CSV files and Google Books API requests.
-
-check_data.py - Inventory reporting and database connection verification.
-
-data/ - Directory for source CSV data.
-
-Dockerfile - Blueprint for building the Docker image.
-
-requirements.txt - Python package dependencies.
-
-.env - (Private) Environment variables and credentials.
 
 
 Author: Imran Khan
