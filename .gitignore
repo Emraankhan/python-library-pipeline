@@ -1,0 +1,15 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Local logs
+logs/*.txt
+
+# Environments (if any)
+.venv/
+env/
+
+# VS Code settings
+.vscode/
+
+.env
