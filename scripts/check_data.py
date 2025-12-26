@@ -1,8 +1,13 @@
 import pandas as pd
 from sqlalchemy import create_engine
+import os
+from dotenv import load_dotenv
 
-# Using the same engine style as ingestion.py
-conn_string = 'postgresql://postgres:emraan123@localhost:5432/my_library'
+# Load the .env file
+load_dotenv()
+
+# Get the connection string from the environment
+conn_string = os.getenv('DB_CONN_STRING')
 engine = create_engine(conn_string)
 
 def verify_inventory():
