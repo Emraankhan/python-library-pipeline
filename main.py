@@ -1,4 +1,4 @@
-from scripts.ingestion import run_csv_ingestion
+from ingestion import run_csv_ingestion
 from scripts.api_collector import search_google_books
 import subprocess
 import os

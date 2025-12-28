@@ -1,6 +1,6 @@
 import requests
 import pandas as pd
-from scripts.ingestion import load_data_to_sql
+from ingestion import load_data_to_sql
 from datetime import datetime
 import os
 
